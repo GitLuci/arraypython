@@ -1,0 +1,21 @@
+index = 0
+conjunto= []
+nome = input(str("introduza nome ou STOP para parar: ")).isupper()
+while True:
+    if index <= 9 and nome != "STOP":
+        nome = input(str("introduza nome ou STOP para parar: ")).upper()
+        index = index + 1
+        if nome == "STOP" or index >= 9:
+            show = input(str("Deseja ver a sua lista ?")).upper()
+            if show == "YES":
+                print(conjunto)
+            else:
+                break
+        conjunto.append(nome)
+    else:
+        show = input(str("Deseja ver a sua lista ?")).upper()
+        if show == "YES":
+            print(conjunto)
+        else:
+            break
+
